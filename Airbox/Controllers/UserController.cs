@@ -39,7 +39,7 @@ namespace Airbox.Controllers
             return NoContent();
         }
 
-        // api/user/getcurrentlocation/1
+        // api/user/currentlocation/1
         [HttpGet("currentLocation/{userId}")]
         public async Task<ActionResult<Location>> GetCurrentLocation(string userId)
         {
