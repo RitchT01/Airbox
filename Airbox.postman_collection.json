@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "d267be0b-7a85-47d9-89f0-d96ef4a8d5ab",
+		"name": "Airbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCurrentLocation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false,
+				"followOriginalHttpMethod": false,
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.169.28.109/api/user/currentlocation/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"169",
+						"28",
+						"109"
+					],
+					"path": [
+						"api",
+						"user",
+						"currentlocation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentLocationAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.169.28.109/api/user/getCurrentLocationAllUsers",
+					"protocol": "http",
+					"host": [
+						"18",
+						"169",
+						"28",
+						"109"
+					],
+					"path": [
+						"api",
+						"user",
+						"getCurrentLocationAllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCurrentLocationAllUsersWithinArea",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.169.28.109/api/user/getCurrentLocationAllUsersWithinArea?LatitudeMin=-31.87656&latitudemax=34.76543&longitudemin=12.654&longitudemax=78.90876",
+					"protocol": "http",
+					"host": [
+						"18",
+						"169",
+						"28",
+						"109"
+					],
+					"path": [
+						"api",
+						"user",
+						"getCurrentLocationAllUsersWithinArea"
+					],
+					"query": [
+						{
+							"key": "LatitudeMin",
+							"value": "-31.87656"
+						},
+						{
+							"key": "latitudemax",
+							"value": "34.76543"
+						},
+						{
+							"key": "longitudemin",
+							"value": "12.654"
+						},
+						{
+							"key": "longitudemax",
+							"value": "78.90876"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetLocationHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://18.169.28.109/api/user/locationhistory/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"169",
+						"28",
+						"109"
+					],
+					"path": [
+						"api",
+						"user",
+						"locationhistory",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostLocation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DateTime\" : \"2021-11-03T12:00:00\",\r\n    \"Longitude\" : 16.089764,\r\n    \"Latitude\" : 89.078695\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://18.169.28.109/api/user/addlocation/1",
+					"protocol": "http",
+					"host": [
+						"18",
+						"169",
+						"28",
+						"109"
+					],
+					"path": [
+						"api",
+						"user",
+						"addlocation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
